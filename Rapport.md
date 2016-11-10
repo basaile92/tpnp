@@ -1,3 +1,3 @@
 Q1:
 
-Un certificat et un jeu de donnée qui vérifie le problème.
+Un certificat est le nombre d'objet et leur poids respectifs. On pourra les stocker dans un tableau.
