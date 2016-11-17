@@ -2,21 +2,38 @@
 public class CertificatBinPack implements Certificat {
 
 	private PblBinPack pb;
-	 //	//   A compléter ... votre représenttaion du certificat
+	private int[] tabNumSac;
+ 	 //	//   A compléter ... votre représenttaion du certificat
 
 	 public CertificatBinPack(PblBinPack p) {
-	  // 	//   A compléter
+		 	this.pb = p;
 	 }
 	    
 	 public CertificatBinPack(PblBinPack p, int[] aff) {
-	      // 	//   A compléter.. construit en fonction des choix de l'utilisateur
+	      	this.pb = p;
+	      	this.tabNumSac = aff;
 	    } 
 	    
 	  //Implémnetation del'interface:
 	    
 	 public boolean estCorrect(){
-		return false;
-	  	//   A compléter
+		 
+		 int[] poids = this.pb.getPoids();
+		 int[] poidsTotaux = new int[this.pb.getNbSacs()];
+		 
+		 // Si ça fonctionne pas mettre des 0 partout dans le tableau en premier
+		 for(int i = 0; i < this.pb.getNbObjets(); i++){
+			 
+			 poidsTotaux[this.tabNumSac[i]] += poids[i] ;
+		 }
+		 
+		 for(int i = 0; i < this.pb.getNbSacs(); i++){
+			 
+			 if(poidsTotaux[i]> this.pb.getCap())
+				 return false;
+		 }
+		 
+		return true;
 	  }
 
 	 public void suivant() {

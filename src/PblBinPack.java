@@ -12,51 +12,13 @@ public class PblBinPack {
     nbSacs=nbs;
     }
     
+   
      //retourne Vrai SSi le pb a une solution
     public boolean aUneSolution() {
     	
-    	if(this.nbObjets <= nbSacs){
-    		
-    		for(int a : this.poids){
-    			
-    			if(a > this.cap)
-    				return false;
-    			
-    		}
-    		return true;
-    		
-    	}
+
     	
-    	
-    	
-    	
-	 //  A compléter
-      // essaie tous les certificats un à un jusqu'à en trouver un correct -si il existe	....
-    	
-    	
-    	boolean res = false;
-    	
-    	while(!res){
-    		
-    		for(int i=0; i< this.nbSacs; i++){
-    			
-    			
-    			
-    			
-    			
-    		}
-    		
-    		
-    		
-    		
-    		
-    		
-    		
-    	}
-    	
-    	
-    	
-    	
+    	return false;
     	
     	
     	
@@ -73,5 +35,24 @@ public class PblBinPack {
 
    // différents accesseurs, fonctions affichage ...
 
+    public int[] getPoids(){
+    	
+    	return this.poids;
+    }
+    
+    public int getNbSacs(){
+    	
+    	return this.nbSacs;
+    }
+    
+    public int getNbObjets(){
+    	
+    	return this.nbObjets;
+    }
+    
+    public int getCap(){
+    	
+    	return this.cap;
+    }
 
 }
